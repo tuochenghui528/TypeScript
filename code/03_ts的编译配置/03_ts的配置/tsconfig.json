@@ -1,0 +1,18 @@
+{
+    "include": ["src/**/*", "test/**/*"],
+    "exclude": ["src/src_exclude/**/*"],
+    "compilerOptions": {
+        //'es3', 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'es2021', 'esnext'
+        "target": "es5",//指定被编译为js的版本
+        //CommonJS、UMD、AMD、System、ES2020、ESNext、None
+        "module":"AMD", //指定模块编译使用的方法
+        //ES5、ES6/ES2015、ES7/ES2016、ES2017、ES2018、ES2019、ES2020、ESNext、DOM、WebWorker、ScriptHost ......
+        "lib": ["ES6", "DOM"],//指定代码运行时所包含的库
+        "outDir": "src/dist", //指定编译后文件的路径
+        "outFile": "src/dist/app.js",//将编译后的js放在同一个js文件
+        "allowJs": false,//是否编译目录下的js文件  默认false 不编译
+        "checkJs": false,//是否检测js语法符合ts语法不  默认false 不检查
+        "removeComments": false, //编译的时候是否要删除注释  默认是false
+        "noEmitOnError": false, //当有错误的时候不生成js文件  默认是false 可以生成
+    }
+}
